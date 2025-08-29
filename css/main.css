@@ -1,0 +1,249 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+
+/* NAVIGATION */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-nav nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(133, 133, 133, 0.37); /* deep green for identity */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 10px 30px;
+}
+
+.top-nav .logo img {
+  height: 55px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.top-nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.top-nav li a:hover,
+.top-nav li.current a {
+  color: #ffd700;
+}
+
+/* HERO SECTION */
+#showcase {
+  background: url("../gt-uploads/photos/buffer.jpg") no-repeat center center/cover;
+  height: 85vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#showcase h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+#showcase p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+/* MAIN CONTENT */
+main {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+}
+main section {
+  margin-bottom: 80px;
+}
+h2 {
+  color: #004d00;
+  border-left: 6px solid #006400;
+  padding-left: 12px;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.text {
+  flex: 1;
+  min-width: 300px;
+}
+.image {
+  flex: 1;
+  min-width: 300px;
+}
+.image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* FACTORY CARDS */
+.factory {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.factory:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+.factory .text {
+  flex: 2;
+}
+.factory .image {
+  flex: 1.2;
+}
+.factory .image img {
+  border-radius: 10px;
+}
+
+
+#newsletter {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 12px;
+}
+#newsletter input[type="email"] {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 280px;
+}
+#newsletter .button_1 {
+  padding: 12px 25px;
+  border: none;
+  background: #ff9800;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+#newsletter .button_1:hover {
+  background: #e68900;
+}
+
+/* CONTACT BOX */
+.contact {
+  background: #e6f2e6;
+  padding: 25px;
+  border-radius: 10px;
+}
+.contact p {
+  margin: 8px 0;
+}
+
+/* FOOTER */
+footer {
+  background: #004d00;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  margin-top: 60px;
+}
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 500;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #showcase h1 {
+    font-size: 2rem;
+  }
+  #showcase p {
+    font-size: 1rem;
+  }
+  .factory, .content {
+    flex-direction: column;
+  }
+  .top-nav nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .top-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* Layout with images */
+.content, .factory {
+  display: flex;
+  align-items: flex-start;  
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1 1 55%;  
+  min-width: 280px;
+}
+
+.image {
+  flex: 1 1 40%;   
+  min-width: 240px;
+  display: flex;
+  justify-content: center;  
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;        
+  object-fit: cover;   
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
